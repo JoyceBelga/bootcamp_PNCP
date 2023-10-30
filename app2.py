@@ -15,8 +15,8 @@ def load_data(tipo):
                             'sancao_lolipop_top10_fornecedores.pkl', 'sancao_treemap_fornecedoresUf.pkl', 
                             'sancao_boxplot_esferaOrgaos.pkl']
     elif tipo == 'publicadores':  #Gabi
-        pickle_filenames = ['publicadores_treemap_qtde_publicador.pkl', 'publicadores_barra_2publicador_ente.pkl',
-                            'publicadores_treemap_3top10_UF.pkl', 'publicadores_barra_4fed_outro_publicador.pkl']
+        pickle_filenames = ['publicadores_treemap_qtde_publicador.pkl', 'publicadores_barra_publicador_ente_2.pkl',
+                            'publicadores_treemap_top10_3.pkl', 'publicadores_barra_fed_outropub_4.pkl']
     # elif tipo == 'adesao'
     # elif tipo == 'fornecedores'
 
@@ -34,9 +34,9 @@ with aba1:
     st.write("[gráficos da Lia]")
 with aba2: 
     st.plotly_chart(dic_publicadores['publicadores_treemap_qtde_publicador.pkl'])
-    st.plotly_chart(dic_publicadores['publicadores_barra_2publicador_ente.pkl'])
-    st.plotly_chart(dic_publicadores['publicadores_treemap_3top10_UF.pkl'])
-    st.plotly_chart(dic_publicadores['publicadores_barra_4fed_outro_publicador.pkl'])
+    st.plotly_chart(dic_publicadores['publicadores_barra_publicador_ente_2.pkl'])
+    st.plotly_chart(dic_publicadores['publicadores_treemap_top10_3.pkl'])
+    st.plotly_chart(dic_publicadores['publicadores_barra_fed_outropub_4.pkl'])
 with aba3: 
     st.write("[gráficos da Monica]")    
 with aba4: 
