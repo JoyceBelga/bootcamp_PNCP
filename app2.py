@@ -12,7 +12,7 @@ aba1, aba2, aba3, aba4 = st.tabs(['Adesão ao Portal', 'Publicadores de Contrato
 def load_data_sancoes():
     pickle_filenames = ['barra-sancao_top10_fornecedores.pkl', 'barra-sancao_Uffornecedores.pkl', 'lolipop-sancao_top10_fornecedores.pkl', 'treemap-sancao_fornecedoresUf.pkl',
                          'barra-sancao_top10_orgaos.pkl', 'boxplot-sancao_esferaOrgaos.pkl',
-                         'heatmap-sancao_municipiosFornecedores.pkl', 'heatmap-sancao_orgao.pkl']
+                         'heatmap-sancao_municipiosFornecedores.pkl']
 
     url = 'https://raw.githubusercontent.com/JoyceBelga/bootcamp_PNCP/main/' 
     figures = {}
@@ -24,6 +24,18 @@ def load_data_sancoes():
 dic_sancoes = load_data_sancoes()
 
 with aba1: 
+    st.write("[gráficos da Lia]")
+with aba2: 
+    st.write("[gráficos da Gabi]")
+with aba3: 
+    st.write("[gráficos da Monica]")    
+with aba4: 
     st.plotly_chart(dic_sancoes['barra-sancao_top10_fornecedores.pkl'])
     st.plotly_chart(dic_sancoes['barra-sancao_Uffornecedores.pkl'])
+    st.plotly_chart(dic_sancoes['lolipop-sancao_top10_fornecedores.pkl'])
+    st.plotly_chart(dic_sancoes['treemap-sancao_fornecedoresUf.pkl'])
+    st.plotly_chart(dic_sancoes['barra-sancao_top10_orgaos.pkl'])
+    st.plotly_chart(dic_sancoes['boxplot-sancao_esferaOrgaos.pkl'])
+    st.plotly_chart(dic_sancoes['heatmap-sancao_municipiosFornecedores.pkl'])
+    
 
