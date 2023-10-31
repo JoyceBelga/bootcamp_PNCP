@@ -1,3 +1,5 @@
+#streamlit run app.py
+
 import requests
 import pickle
 import streamlit as st
@@ -17,8 +19,9 @@ def load_data(tipo):
     elif tipo == 'publicadores':  #Gabi
         pickle_filenames = ['publicadores_treemap_qtde_publicador.pkl', 'publicadores_barra_publicador_ente_2.pkl',
                             'publicadores_treemap_top10_3.pkl', 'publicadores_barra_fed_outropub_4.pkl']
-    # elif tipo == 'adesao'
-    # elif tipo == 'fornecedores'
+    elif tipo == 'adesao':  #Lia
+        pickle_filenames = ['adesao_visao_geral1.pkl']        
+    # elif tipo == 'fornecedores':
 
     url = 'https://raw.githubusercontent.com/JoyceBelga/bootcamp_PNCP/main/' 
     figures = {}
@@ -32,6 +35,9 @@ dic_publicadores = load_data('publicadores')
 
 with aba1: 
     st.write("[gráficos da Lia]")
+    #*** se gráfico for matplotlib, chamar dessa forma:
+    st.pyplot(pickle.load(open('adesao_visao_geral1.pkl','rb')))
+    #***
 with aba2: 
     st.plotly_chart(dic_publicadores['publicadores_treemap_qtde_publicador.pkl'])
     st.plotly_chart(dic_publicadores['publicadores_barra_publicador_ente_2.pkl'])
