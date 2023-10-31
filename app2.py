@@ -19,8 +19,8 @@ def load_data(tipo): #carregar dados de mapas e gráficos, em formato pickle, de
         pickle_filenames = ['publicadores_treemap_qtde_publicador.pkl', 'publicadores_barra_publicador_ente_2.pkl',
                             'publicadores_treemap_top10_3.pkl', 'publicadores_barra_fed_outropub_4.pkl']
     elif tipo == 'adesao':  #Lia
-        pickle_filenames = ['adesao_visao_geral1.pkl', 'adesao_visao_geral_por_ano_M2.pkl', 'adesao_esferas_por_mes_M3.pkl', 'adesao_heatmap_muncomenv4.pkl', 
-                            'adesao_heatmap_estados_qtde_contratos.pkl', 'adesao_heatmap_estados_repres_percent.pkl']
+        pickle_filenames = ['adesao_visao_geral1.pkl', 'adesao_visao_geral_por_ano_M2.pkl', 'adesao_esferas_por_mes_M3.pkl', 'adesao_heatmap_muncomenv4.pkl']
+                            #'adesao_heatmap_estados_qtde_contratos.pkl', 'adesao_heatmap_estados_repres_percent.pkl']  #estão muito epsados e travando a página
     # elif tipo == 'fornecedores': #Monica
         #pickle_filenames = ['']
     
@@ -41,8 +41,8 @@ with aba1: #Lia
     st.pyplot(pickle.load(open('adesao_visao_geral_por_ano_M2.pkl','rb')))   #matplotlib!
     st.pyplot(pickle.load(open('adesao_esferas_por_mes_M3.pkl','rb')))   #matplotlib!
     st.plotly_chart(dic_adesao['adesao_heatmap_muncomenv4.pkl'])  #plotly
-    st.plotly_chart(dic_adesao['adesao_heatmap_estados_qtde_contratos.pkl'])  #plotly
-    st.plotly_chart(dic_adesao['adesao_heatmap_estados_repres_percent.pkl'])  #plotly
+    # st.plotly_chart(dic_adesao['adesao_heatmap_estados_qtde_contratos.pkl'])  #plotly
+    # st.plotly_chart(dic_adesao['adesao_heatmap_estados_repres_percent.pkl'])  #plotly
 with aba2: #Gabi
     st.plotly_chart(dic_publicadores['publicadores_treemap_qtde_publicador.pkl']) #plotly
     st.plotly_chart(dic_publicadores['publicadores_barra_publicador_ente_2.pkl']) #plotly
